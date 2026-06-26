@@ -1,0 +1,31 @@
+ No newline at end of file
+{
+  "version": 1,
+  "hooks": {
+    "afterFileEdit": [
+      {
+        "command": "if [ \"$CURSOR_AGENT\" = \"1\" ] && [ -x \"$HOME/.cursor/hooks/corridor/after-file-edit\" ]; then \"$HOME/.cursor/hooks/corridor/after-file-edit\"; fi"
+      }
+    ],
+    "beforeMCPExecution": [
+      {
+        "command": "if [ \"$CURSOR_AGENT\" = \"1\" ] && [ -x \"$HOME/.cursor/hooks/corridor/before-mcp-execution\" ]; then \"$HOME/.cursor/hooks/corridor/before-mcp-execution\"; fi"
+      }
+    ],
+    "beforeShellExecution": [
+      {
+        "command": "if [ \"$CURSOR_AGENT\" = \"1\" ] && [ -x \"$HOME/.cursor/hooks/corridor/before-shell-execution\" ]; then \"$HOME/.cursor/hooks/corridor/before-shell-execution\"; fi"
+      }
+    ],
+    "beforeSubmitPrompt": [
+      {
+        "command": "if [ \"$CURSOR_AGENT\" = \"1\" ] && [ -x \"$HOME/.cursor/hooks/corridor/before-submit-prompt\" ]; then \"$HOME/.cursor/hooks/corridor/before-submit-prompt\"; fi"
+      }
+    ],
+    "stop": [
+      {
+        "command": "if [ \"$CURSOR_AGENT\" = \"1\" ] && [ -x \"$HOME/.cursor/hooks/corridor/stop\" ]; then \"$HOME/.cursor/hooks/corridor/stop\"; fi"
+      }
+    ]
+  }
+}
